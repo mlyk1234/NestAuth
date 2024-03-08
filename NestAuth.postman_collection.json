@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "5a95c2f1-625e-4ae4-95ac-8db7ed8954f7",
+		"name": "NestAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14860716",
+		"_collection_link": "https://soloproject.postman.co/workspace/GraphQL~bb451a80-29cb-4a7a-8518-93a78a6f7f4d/collection/14860716-5a95c2f1-625e-4ae4-95ac-8db7ed8954f7?action=share&source=collection_link&creator=14860716"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email@mailer.com\",\r\n    \"password\": \"test1234@ABC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{endpoint}}/api/v1/users/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"email@mailer.com\",\r\n    \"password\": \"test1234@ABC\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{endpoint}}/api/v1/auth/user-login"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile (Via Token)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsZWV5b25ka2luZzJAZ21haWwuY29tIiwiZXhwIjoxNzA5OTI0NzAzNTUyLCJpYXQiOjE3MDk5MDk3MDN9.wEiPhPcUBYpHa-8_U5MAoTXaNrG7t48ed0uA-smkPC0"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{endpoint}}/api/v1/auth/me"
+			},
+			"response": []
+		}
+	]
+}
