@@ -19,6 +19,9 @@ JWT_EXPIRATION_TIME="DURATION IN SECS"
 ```
 ## API Reference
 
+### For ease of testing: Download and Use this postman collection
+[POSTMAN COLLECTION](https://github.com/mlyk1234/NestAuth/blob/master/NestAuth.postman_collection.json)
+
 ### By default the app runs on port 8080
 
 #### Register
